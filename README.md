@@ -1,2 +1,4 @@
 # rock-renderer
-"Ceci n'est pas une pipe."
+
+The Treachery of Images - *René Magritte*
+
