@@ -84,7 +84,7 @@ inline std::vector<unsigned char> ReadASCII(const char* fname, int n)
 
         for (std::string istr : temp_tokens)
         {
-            out[idata++] = std::atoi(istr.c_str())*255;
+            out[idata++] = std::atoi(istr.c_str());
         }
     }
     
