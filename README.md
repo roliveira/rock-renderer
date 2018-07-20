@@ -1,5 +1,7 @@
 # rock-renderer
 
+This is a ray tracing wrap on top of [OSPRay](https://www.ospray.org/) to render pore scale images.
+
 The Treachery of Images - *René Magritte*
 
 <table>
