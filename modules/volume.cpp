@@ -19,11 +19,11 @@ using namespace ospcommon;
 
 void setup_volume(OSPVolume volume, std::vector<unsigned char> volume_data, OSPTransferFunction transfer_fcn, const vec3i &dims) {
 	const std::vector<vec3f> colors = {
-		vec3f(0, 0, 0),
+		vec3f(0.0, 0.0, 0.0),
 		vec3f(0.9, 0.9, 0.9)
 	};
 
-	const std::vector<float> opacities = {0.1f, 0.5f};
+	const std::vector<float> opacities = {0.01f, 0.9f};
 	OSPData colors_data = ospNewData(colors.size(), OSP_FLOAT3, colors.data());
 	ospCommit(colors_data);
 	OSPData opacity_data = ospNewData(opacities.size(), OSP_FLOAT, opacities.data());
