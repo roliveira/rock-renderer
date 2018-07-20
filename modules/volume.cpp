@@ -24,11 +24,7 @@ void setup_volume(OSPVolume volume, std::vector<unsigned char> volume_data, OSPT
 		vec3f(0.9, 0.9, 0.9)
 	};
 
-<<<<<<< HEAD
 	const std::vector<float> opacities = {0.01f, 0.9f};
-=======
-	const std::vector<float> opacities = {0.01f, 0.5f};
->>>>>>> da1f5e32781e8c715e05dbe5469055f54d27e511
 	OSPData colors_data = ospNewData(colors.size(), OSP_FLOAT3, colors.data());
 	ospCommit(colors_data);
 	OSPData opacity_data = ospNewData(opacities.size(), OSP_FLOAT, opacities.data());
