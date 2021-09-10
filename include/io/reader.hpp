@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 
 
 
@@ -89,6 +90,27 @@ inline std::vector<unsigned char> ReadASCII(const char* fname, int n)
     }
     
     ifs.close();
+
+    return out;
+}
+
+
+std::vector<int> ReadRAW(const char* fname, long int n) 
+{
+    std::vector<int> out(n);  
+    std::ifstream fin(fname, std::ifstream::binary);
+    
+    unsigned char data;
+    long int i = 0;
+
+    while(!fin.eof())
+    {
+        fin >> data;
+        out[i++] = static_cast<int>(data);
+        // std::cout << (int)data << std::endl;
+    }
+ 
+    fin.close();
 
     return out;
 }
